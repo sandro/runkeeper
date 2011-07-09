@@ -21,7 +21,7 @@ class Runkeeper
     end
 
     def formatted_start_time
-      start_time.strftime("%a, %d %b %Y %H:%M:%S")
+      start_time.strftime("%a, %d %b %Y %H:%M:%S %Z")
     end
 
     def to_hash
