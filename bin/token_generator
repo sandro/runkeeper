@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'runkeeper'
+require 'runkeeper/token_generator'
+
+Runkeeper::Connection.authorize
