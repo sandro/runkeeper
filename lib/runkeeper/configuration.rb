@@ -13,11 +13,11 @@ class Runkeeper
     end
 
     def authorization_url
-      @authorization_url || ENV['AUTHORIZATION_URL']
+      @authorization_url || ENV['AUTHORIZATION_URL'] || "https://runkeeper.com/apps/authorize"
     end
 
     def access_token_url
-      @access_token_url || ENV['ACCESS_TOKEN_URL']
+      @access_token_url || ENV['ACCESS_TOKEN_URL'] || "https://runkeeper.com/apps/token"
     end
   end
 
