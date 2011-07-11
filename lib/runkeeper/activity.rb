@@ -2,7 +2,7 @@ class Runkeeper
 
   class Activity
     attr_reader :connection, :url
-    attr_reader :type, :start_time, :total_distance, :duration, :average_heart_rate, :total_calories, :notes, :path, :post_to_facebook, :post_to_twitter
+    attr_accessor :type, :start_time, :total_distance, :duration, :average_heart_rate, :total_calories, :notes, :path, :post_to_facebook, :post_to_twitter
 
     def initialize(connection, attrs)
       @connection = connection
