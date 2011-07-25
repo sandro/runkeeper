@@ -20,6 +20,10 @@ class Runkeeper
       connection.user_response['userID']
     end
 
+    def user_name
+      profile =~ /\/user\/(.*)$/ && $1
+    end
+
     def fitness_activities
       connection.fitness_activities
     end
