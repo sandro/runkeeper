@@ -1,4 +1,4 @@
-class Runkeeper
+module Runkeeper
 
   class Connection
     include HTTParty

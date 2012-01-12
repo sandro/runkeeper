@@ -1,4 +1,4 @@
-class Runkeeper
+module Runkeeper
 
   class User
     attr_reader :connection, :token

@@ -1,4 +1,4 @@
-class Runkeeper
+module Runkeeper
 
   class Activity
     attr_reader :connection, :url

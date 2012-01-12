@@ -5,7 +5,7 @@ rescue LoadError
   puts "rack and launchy are required"
 end
 
-class Runkeeper
+module Runkeeper
   class AuthorizationServer
     class App
       attr_reader :code, :env, :server
