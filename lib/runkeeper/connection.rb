@@ -1,4 +1,4 @@
-class Runkeeper
+module Runkeeper
 
   class Connection
     include HTTParty
@@ -9,10 +9,10 @@ class Runkeeper
     ACCEPT_HEADERS = {
       :user => "application/vnd.com.runkeeper.User+json",
       :fitness_activities => "application/vnd.com.runkeeper.FitnessActivityFeed+json",
-      :past_activities => "application/vnd.com.runkeeper.FitnessActivity+json",
-      :records => "application/vnd.com.runkeeper.Records+json",
-      :profile => "application/vnd.com.runkeeper.Profile+json",
-      :new_activity => "application/vnd.com.runkeeper.NewFitnessActivity+json"
+      :past_activities    => "application/vnd.com.runkeeper.FitnessActivity+json",
+      :records            => "application/vnd.com.runkeeper.Records+json",
+      :profile            => "application/vnd.com.runkeeper.Profile+json",
+      :new_activity       => "application/vnd.com.runkeeper.NewFitnessActivity+json"
     }
 
     attr_reader :token, :user_response
@@ -35,8 +35,9 @@ class Runkeeper
       self.class.get(user_response['fitness_activities'], :headers => headers(:fitness_activities))
     end
 
-    def past_activities
-      self.class.get(user_response['fitness_activities'], :headers => headers(:past_activities))
+    # url: like '/fitnessActivities/66086447' or fitness_activities['items'][0]['uri']
+    def past_activity(uri)
+      self.class.get(uri, :headers => headers(:past_activities))
     end
 
     def records

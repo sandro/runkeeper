@@ -1,7 +1,7 @@
 require 'httparty'
 require 'json'
 
-class Runkeeper
+module Runkeeper
   require 'runkeeper/version'
 
   autoload 'Connection', 'runkeeper/connection'

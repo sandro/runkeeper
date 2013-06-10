@@ -1,4 +1,4 @@
-class Runkeeper
+module Runkeeper
 
   module Configuration
     extend self
